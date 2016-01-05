@@ -35,13 +35,16 @@ p {
     width: 100%;
   }
 
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width : 994px) {
   .parallax-container .section {
     position: absolute;
     top: 40%;
   }
   #index-banner .section {
     top: 10%;
+  }
+  #iphone {
+	  display:none;
   }
 }
 
@@ -61,4 +64,5 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
 
