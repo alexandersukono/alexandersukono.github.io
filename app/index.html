@@ -3,9 +3,25 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="keywords" content="Ombaq, Ombaq Insight, Social analyzer">
+  <meta name="Description" content="Your Social Media Command Center. Manage multiple social media accounts in one place, collaboratively.">
+  <meta name="robots" content="index, follow">
+  
+  <meta property="og:title" content="Ombaq Insight">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://alexandersukono.github.io/app">
+  <meta property="og:image" content="http://alexandersukono.github.io/app/images/tw.png">
+  
+  <meta name="twitter:card" content="Ombaq Insight">
+  <meta name="twitter:site" content="@username">
+  <meta name="twitter:title" content="Ombaq Insight">
+  <meta name="twitter:description" content="Your Social Media Command Center. Manage multiple social media accounts in one place, collaboratively.">
+  
+  <link rel=”publisher” href=”https://plus.google.com/alexandersukono”>
   <title>Ombaq</title>
 
   <!-- CSS  -->
+  <link rel="canonical" href="https://dev.twitter.com/web/tweet-button">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
@@ -14,6 +30,18 @@
 </head>
 
 <body>
+   <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+
   <nav class="transparent" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">Logo</a>
@@ -21,8 +49,8 @@
         <li><a href="#">Link1</a></li>
 		<li><a href="#">Link2</a></li>
 		<li><a href="#">Link3</a></li>
-		<li><a class="modal-trigger" href="#signup-modal">SIGN UP</a></a></li>
-		<li><a class="modal-trigger" href="#signin-modal">LOGIN</a></a></li>
+		<li><a class="modal-trigger" href="#signup-modal">SIGN UP</a></li>
+		<li><a class="modal-trigger" href="#signin-modal">LOGIN</a></li>
       </ul>
 	
       <ul id="nav-mobile" class="side-nav">
@@ -34,7 +62,7 @@
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
-	<div class="parallax" style="width:100%;overflow:hidden"><img src="images/background.jpg" alt="Unsplashed background img 1"></div>
+	<div class="parallax" style="width:100%;overflow:hidden"><img src="images/background.jpg" alt="Unsplashed background img"></div>
   </nav>
 
   
@@ -57,7 +85,7 @@
 			
 			</div>
 			<div id="iphone" class="col m12 l4" style="margin-top:5.9%">
-				<img src="images/iphone.png">
+				<img src="images/iphone.png" alt="iphone image">
 			</div>
 		</div>
         <br><br>
@@ -75,14 +103,14 @@
       <form class="login-form">	
 		<div class="row" style="margin-bottom:0px">
 		 <div class="input-field col s12 center">
-			<a href="" id="download-button" style="background-color:#4099FF;width:85%" class="btn waves-effect waves-light lighten-1"><img style="vertical-align:middle;padding-right:10px;padding-bottom:5px" src="images/tw.png"><span style="padding-left:10px;border-left:1px solid white">Sign in with Twitter</span></a>
+			<a href="" id="download-button" style="background-color:#4099FF;width:85%" class="btn waves-effect waves-light lighten-1"><img style="vertical-align:middle;padding-right:10px;padding-bottom:5px" src="images/tw.png" alt="twitter logo"><span style="padding-left:10px;border-left:1px solid white">Sign in with Twitter</span></a>
          </div>
 	    </div>
 		
 	    
 		<div class="row">
           <div class="input-field col s12 center">
-           <a href="" id="download-button" style="background-color:#3b5998;width:85%" class="btn waves-effect waves-light lighten-1" style="height:10px"><img style="vertical-align:middle;padding-right:10px;padding-bottom:7px" src="images/fb.png"><span style="padding-left:10px;border-left:1px solid white">Sign in with Facebook</span></a>
+           <a href="" id="download-button" style="background-color:#3b5998;width:85%" class="btn waves-effect waves-light lighten-1" style="height:10px"><img style="vertical-align:middle;padding-right:10px;padding-bottom:7px" src="images/fb.png" alt="fb logo"><span style="padding-left:10px;border-left:1px solid white">Sign in with Facebook</span></a>
           </div>
 		  
         </div>
@@ -118,21 +146,7 @@
             <a href="login.html" class="btn waves-effect waves-light col s12">Login</a>
           </div>
         </div>
-		<script>
-		function closeSignIn() {
-			$('#signin-modal').closeModal();
-			setTimeout(function(){
-				$('#signup-modal').openModal();
-			}, 300);
-	    }
-		
-		function closeSignUp() {
-			$('#signup-modal').closeModal();
-			setTimeout(function(){
-				$('#signin-modal').openModal();
-			}, 300);
-	    }
-	    </script>
+
         <div class="row">
           <div class="input-field col s7 m7 l7">
             <p class="margin medium-small" style="font-size:11px">Don't have an account? <a href="javascript:closeSignIn();">Sign Up Now!</a></p>
@@ -275,13 +289,13 @@
 		</div>
 		
 		<div class="col s12 m5 right-align" style="padding-top:4%">
-			<img src="images/ipad.png">
+			<img src="images/ipad.png" alt="ipad image">
 		
 		</div>
     </div>
 	<div class="row" style="margin-bottom:0px;border-bottom:1px inset #dfdfdf;background-color:#fafafa">	
 		<div class="col s12 m5" style="margin-left:9%;padding-top:4%">
-			<img src="images/ipad.png">
+			<img src="images/ipad.png" alt="ipad image">
 		
 		</div>
 		
@@ -328,6 +342,17 @@
           </ul>
         </div>
       </div>
+	  
+	  <div class="row">
+	  <div class="col l1 m1 s12">
+		  <div class="tw-share-button">
+			<a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="http://ombaq.com" data-text="ombaQ - your social media command center www.ombaq.com">Tweet</a>
+		  </div>
+	  </div>
+	  <div class="col l1 m1 s12" style="padding-bottom:10px">
+		  <div class="fb-share-button" data-href="https://ombaq.com/" data-layout="button"></div>
+	  </div>
+    </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
